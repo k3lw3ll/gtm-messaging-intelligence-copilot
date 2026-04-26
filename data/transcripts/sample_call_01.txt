@@ -1,0 +1,77 @@
+Sample Call Transcript
+
+Participants:
+
+Sarah (Director of Platform Engineering, Prospect)
+Mike (Senior Engineer, Prospect)
+Alex (Sales Engineer, Vendor)
+
+Sarah:
+So I think where we’re struggling right now is just managing access across everything. We’ve got AWS, some stuff still on-prem, and then a bunch of Kubernetes clusters. It’s not centralized in any meaningful way.
+
+Mike:
+Yeah, and we’ve kind of layered tools over time. We have VPN for some access, then we’re using IAM roles in AWS, and then for Kubernetes it’s a mix of RBAC and some homegrown scripts.
+
+Alex:
+Got it. And how are you currently handling access requests or approvals?
+
+Sarah:
+Honestly, it’s pretty manual. People usually just Slack the team or open a ticket. There’s not really a consistent process.
+
+Mike:
+And once access is granted, it tends to just stay there. We don’t have a great way of expiring it unless someone remembers.
+
+Alex:
+That’s helpful. And what’s driving you to look at solutions right now?
+
+Sarah:
+We’ve had a couple of internal audits where this came up. Nothing catastrophic, but it’s clear we don’t have strong controls. Also, it just slows people down. Engineers spend too much time figuring out how to get access.
+
+Mike:
+Yeah, onboarding is rough. New hires take way too long to get everything they need.
+
+Alex:
+That makes sense. One of the things we focus on is moving away from network-based access like VPNs and toward identity-based access with short-lived credentials.
+
+Sarah:
+When you say identity-based, how is that different from what we’re doing with IAM today?
+
+Alex:
+Good question. Instead of relying on long-lived credentials or network location, access is granted based on verified identity and context, and it’s ephemeral—so it expires automatically.
+
+Mike:
+So is this replacing IAM, or sitting on top of it?
+
+Alex:
+It typically integrates with your existing systems. It doesn’t replace everything, but it centralizes and standardizes access.
+
+Sarah:
+That’s one area where I’m a little unclear. It feels like we already have a bunch of identity tools, and I’m not sure how this is different versus just adding another layer.
+
+Mike:
+Yeah, that’s kind of my concern too. We don’t want to introduce more complexity.
+
+Alex:
+Totally fair. The goal is actually to reduce complexity by consolidating access patterns.
+
+Sarah:
+I think we’d need to see a really concrete example of how this works day to day. Like, what does an engineer actually do differently?
+
+Mike:
+And how hard is it to integrate? We’ve got a lot of legacy stuff.
+
+Alex:
+Integration depends on the environment, but we try to make it incremental.
+
+Sarah:
+Okay. I think for us the key questions are:
+
+how this fits with what we already have
+how disruptive it is to roll out
+and whether it actually simplifies things
+
+Mike:
+And how we know it’s working. Like, visibility and auditability are big for us.
+
+Sarah:
+Yeah, especially with audits coming up again next quarter.
