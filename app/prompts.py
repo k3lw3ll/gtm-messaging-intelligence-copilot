@@ -61,6 +61,12 @@ field_enablement_notes:
 - note
 - use_case
 
+IMPORTANT:
+- Return ONLY valid JSON
+- Do NOT include markdown formatting
+- Do NOT include code fences (no ``` blocks)
+- Do NOT include any explanation before or after the JSON
+
 PRODUCT MESSAGING:
 {product_messaging}
 
