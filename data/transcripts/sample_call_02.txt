@@ -1,0 +1,68 @@
+Sample Call 02 Transcript
+
+Participants:
+
+Jason (Head of Infrastructure, Prospect)
+Priya (Security Engineer, Prospect)
+Daniel (Sales Engineer, Vendor)
+
+Jason:
+We’ve been trying to clean up access for a while, but it’s kind of grown organically. Different teams do different things.
+
+Priya:
+Yeah, for production access we’re pretty strict, but for lower environments it’s all over the place. There’s not really a consistent policy.
+
+Daniel:
+How are you handling access today across those environments?
+
+Jason:
+It depends. Some teams use IAM roles, some use shared credentials, and then there’s still a VPN in the mix for certain systems.
+
+Priya:
+And honestly, visibility is a big issue. If someone asks who accessed what last week, it takes a while to piece that together.
+
+Daniel:
+Got it. And is that something that’s becoming more of a priority now?
+
+Priya:
+Yeah, definitely. We’ve got more scrutiny from security reviews. Auditability is becoming a requirement, not just a nice-to-have.
+
+Jason:
+Also, we’re scaling pretty quickly. What worked when we had 20 engineers doesn’t really work now.
+
+Daniel:
+That makes sense. One of the things we focus on is creating a consistent access model across environments with centralized visibility.
+
+Jason:
+So is this something that replaces our current setup, or sits alongside it?
+
+Daniel:
+It usually integrates with what you already have and standardizes access patterns.
+
+Priya:
+I think my concern is around enforcement. Like, how do you make sure people actually follow the new model?
+
+Jason:
+Yeah, and how opinionated is it? We’ve got some pretty specific workflows already.
+
+Daniel:
+It’s flexible, but it does introduce a more consistent framework.
+
+Priya:
+Okay, but that’s where I worry. Sometimes “framework” means we have to change a lot of how we work.
+
+Jason:
+And what does rollout look like? Is this something we can do incrementally?
+
+Daniel:
+Typically, yes—it can be phased in over time.
+
+Priya:
+I think for us, the big questions are:
+
+how enforceable this actually is
+how much change it requires
+and how quickly we can see value
+
+Jason:
+Yeah, and whether it actually reduces overhead, or just shifts it somewhere else.
