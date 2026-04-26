@@ -104,3 +104,10 @@ Notes
 This project is designed as a workflow system rather than a standalone application.
 
 The focus is on transforming unstructured GTM inputs into structured outputs that can be reused across teams.
+
+Example Analysis
+
+See:
+
+output/sample_call_01_analysis.json
+output/sample_call_01_analysis.md

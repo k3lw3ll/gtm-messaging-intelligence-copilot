@@ -1,12 +1,12 @@
 import os
 from typing import Dict
-
+from dotenv import load_dotenv
 from openai import OpenAI
 
 from app.prompts import build_analysis_prompt
 from app.schemas import empty_analysis_result
 
-
+load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 
